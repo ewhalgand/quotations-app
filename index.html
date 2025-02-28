@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quotations-app</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Mes citations</h1>
@@ -11,14 +12,25 @@
     <h3>0 citations</h3>
     <hr>
 
-    <form action="" id="formQuote">
-        <label for="enterTheQuote">Saisir la citation</label>
-        <input type="text" name="enterTheQuote" id="enterTheQuote">
+    <form action="" id="formQuote" class="form-quote">
+        <div class="quote-text">
+            <label for="enterTheQuote">Saisir la citation</label>
+            <input type="text" name="enterTheQuote" id="enterTheQuote">
+        </div>
 
-        <label for="author">Saisir le nom de l'auteur ou de l'autrice</label>
-        <input type="text" name="author" id="author">
+        <div class="author-text">
+            <label for="author">Saisir le nom de l'auteur ou de l'autrice</label>
+            <input type="text" name="author" id="author">
+        </div>
 
-        <button type="submit"></button>
+        <button type="submit">Envoyer</button>
     </form>
+
+    <div id="quote-list" class="quote-list">
+        <div class="quote">
+            <p class="text">Citation : "On ne naît pas femme, on le devient."</p>
+            <p class="author">Autrice : Simone de Beauvoir</p>
+        </div>
+    </div>
 </body>
 </html>
