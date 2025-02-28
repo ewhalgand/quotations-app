@@ -3,15 +3,20 @@ const text = document.querySelector('#enterTheQuote');
 const author = document.querySelector('#author');
 const quoteList = document.querySelector('#quote-list')
 
+let quoteCount = 0;
+
 formQuote.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const textValue = text.value;
     const authorValue = author.value
-    console.log(textValue, authorValue)
+
+    addQuote(textValue, authorValue)
 })
 
-function addQuote(quote, author) {
+const addQuote = (quote, author) => {
+    const count = document.getElementById('count')
+
     const quoteElement = document.createElement("p")
     quoteElement.classList.add("text")
     quoteElement.innerText = `Citation: ${quote}`
@@ -26,4 +31,7 @@ function addQuote(quote, author) {
     quoteContainerElement.appendChild(authorElement)
 
     quoteList.appendChild(quoteContainerElement)
+    quoteCount++
+
+    count.innerText = `${quoteCount} citations`
 }
